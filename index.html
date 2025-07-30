@@ -3,18 +3,26 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>
-   AI or Human? The Ultimate Content Challenge
+    AI'ce breaker event- Giggles galore
   </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
-   body {
+    body {
       font-family: "Inter", sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background-color: #0A0A0A; /* Very dark base color */
+      /* Updated background to use the new provided image */
+      background-image: url("http://googleusercontent.com/file_content/1");
+      background-size: cover; /* Cover the entire background */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-attachment: fixed; /* Keep background fixed when scrolling */
       min-height: 100vh;
     }
+
+    /* Removed @keyframes backgroundPan as it's no longer needed */
+
     video {
       max-width: 100%;
       border-radius: 0.375rem;
@@ -24,11 +32,8 @@
       border-radius: 0.375rem;
       box-shadow: 0 4px 15px rgb(0 0 0 / 0.25);
       object-fit: cover;
-      max-width: 100%;
-      height: auto;
-      display: block;
     }
-    .gradient-text {
+    .main-gradient-text {
       background: linear-gradient(90deg, #a855f7, #ec4899);
       background-size: 200% 200%;
       -webkit-background-clip: text;
@@ -37,6 +42,16 @@
       text-shadow: none;
       font-family: 'Poppins', sans-serif;
       letter-spacing: -0.02em;
+    }
+    .black-grey-gradient-text {
+      background: linear-gradient(90deg, #333333, #888888); /* Dark grey to light grey */
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientAnimation 3s ease infinite;
+      text-shadow: none;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 0.05em;
     }
     @keyframes gradientAnimation {
       0% {
@@ -87,144 +102,159 @@
       0%, 100% { opacity: 0.9; transform: scale(1) rotate(0deg); }
       50% { opacity: 0; transform: scale(0.5) rotate(45deg); }
     }
-    #result-container {
-      background: white;
-      border-radius: 2rem;
-      padding: 3rem 2rem;
-      box-shadow: 0 10px 30px rgb(168 85 247 / 0.3);
-      max-width: 720px;
-      margin: 3rem auto;
-      color: #4b5563;
+    /* Styles for the main content area */
+    main {
+        background: rgba(17, 24, 39, 0.8); /* Darker, semi-transparent background */
+        backdrop-filter: blur(5px); /* Optional: Adds a subtle blur effect */
+        border: 1px solid rgba(0, 255, 255, 0.3); /* Electric blue border */
+        color: #E5E7EB; /* Light grey text for contrast */
     }
-    #final-message {
-      font-style: italic;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      margin-top: 1rem;
-      color: #4b5563;
-      text-shadow: none;
-      font-family: 'Inter', sans-serif;
-      font-size: 1.5rem;
-      line-height: 1.6;
+    /* Adjust text colors within main to be visible on dark background */
+    main h1, main h2, main p, main span {
+        color: inherit; /* Inherit color from main */
     }
-    #result-container button {
-      font-size: 1.125rem;
-      letter-spacing: 0.02em;
-      box-shadow: 0 8px 20px rgb(168 85 247 / 0.3);
-      transition: box-shadow 0.3s ease;
+    /* Specific adjustments for elements within #front-page and #game */
+    #front-page p {
+        color: #D1D5DB; /* Lighter grey for better readability */
     }
-    #result-container button:hover {
-      box-shadow: 0 12px 30px rgb(168 85 247 / 0.6);
+    #question-text {
+        color: #E5E7EB; /* Light grey for question text */
+    }
+    #content-box {
+        background: rgba(31, 41, 55, 0.9); /* Darker background for content box */
+        border-color: rgba(0, 255, 255, 0.2); /* Subtle electric blue border */
+        color: #E5E7EB; /* Light grey text */
     }
     #content-box p {
-      white-space: pre-wrap;
+        color: #E5E7EB; /* Ensure text in content box is light */
+    }
+    #feedback-text {
+        color: #E5E7EB; /* Light grey for feedback text */
+    }
+    #result-container {
+        background: rgba(17, 24, 39, 0.9); /* Darker background for result container */
+        box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2); /* Electric blue shadow */
+        border: 1px solid rgba(0, 255, 255, 0.3); /* Electric blue border */
+        color: #E5E7EB; /* Light grey text */
+    }
+    #result-container button {
+        box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3); /* Electric blue shadow for buttons */
+    }
+    #result-container button:hover {
+        box-shadow: 0 12px 30px rgba(0, 255, 255, 0.6); /* Enhanced hover shadow */
+    }
+    #final-message {
+        color: #E5E7EB; /* Light grey for final message */
+    }
+    #end-container {
+        background: rgba(17, 24, 39, 0.9); /* Darker background for end container */
+        box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2); /* Electric blue shadow */
+        border: 1px solid rgba(0, 255, 255, 0.3); /* Electric blue border */
+        color: #E5E7EB; /* Light grey text */
+    }
+    #end-container h2 {
+        color: #00AACC; /* Electric blue for end container title */
+    }
+    #end-container p {
+        color: #D1D5DB; /* Lighter grey for end container text */
     }
   </style>
  </head>
  <body class="flex flex-col items-center justify-center p-4 min-h-screen">
-  <main class="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-8 md:p-12 mt-12 mb-12 flex flex-col items-center">
+  <main class="w-full max-w-4xl rounded-3xl shadow-2xl p-8 md:p-12 mt-12 mb-12 flex flex-col items-center">
    <section class="flex flex-col items-center space-y-8 w-full" id="front-page">
     <h1 class="text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-600 to-purple-700 tracking-wide select-none">
-     AI or Human?
-     <br/>
-     <span class="text-3xl font-semibold text-gray-700">
-      The Ultimate Content Challenge
-     </span>
+      AI'ce breaker event- Giggles galore
+      <br/>
+      <span class="text-3xl font-semibold black-grey-gradient-text">
+        AI vs Human?
+      </span>
     </h1>
-    <img alt="High quality image showing a split screen with human creativity on one side featuring a person writing and painting, and AI creativity on the other side with digital neural network and code symbols, visually explaining the game concept of distinguishing AI and human content" class="rounded-3xl shadow-lg max-w-full" height="300" src="https://motionarray.imgix.net/motion-array-2056463-kg8z0CL8Ch-high_0006.jpg?w=660&amp;q=60&amp;fit=max&amp;auto=format" width="600"/>
-    <p class="text-center text-gray-800 text-lg max-w-3xl">
-     Challenge your insight. Distinguish the subtle line where human creativity
-     meets artificial intelligence. Are you ready to see beyond the obvious?
+    <img alt="High quality image showing a split screen with human creativity on one side featuring a person writing and painting, and AI creativity on the other side with digital neural network and code symbols, visually explaining the game concept of distinguishing AI and human content" class="rounded-3xl shadow-lg max-w-full" height="200" src="https://motionarray.imgix.net/motion-array-2056463-kg8z0CL8Ch-high_0006.jpg?w=660&amp;q=60&amp;fit=max&amp;auto=format" width="400"/>
+    <p class="text-center text-lg max-w-3xl">
+      Challenge your insight. Distinguish the subtle line where human creativity
+      meets artificial intelligence. Are you ready to see beyond the obvious?
     </p>
     <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="start-btn" type="button">
-     Start Game
+      Start Game
     </button>
    </section>
    <section class="hidden w-full space-y-10" id="game">
     <div class="space-y-8" id="question-container">
-     <p class="text-xl md:text-2xl font-semibold text-gray-900 leading-relaxed text-center" id="question-text">
+      <p class="text-xl md:text-2xl font-semibold leading-relaxed text-center" id="question-text">
       Loading question...
-     </p>
-     <div class="bg-gray-100 border border-gray-300 rounded-xl p-6 text-gray-800 text-base md:text-lg min-h-[180px] flex flex-col items-center justify-center space-y-6" id="content-box">
+      </p>
+      <div class="border rounded-xl p-6 text-base md:text-lg min-h-[180px] flex flex-col items-center justify-center space-y-6" id="content-box">
       Loading content...
-     </div>
-     <div class="flex flex-col sm:flex-row gap-6 justify-center">
+      </div>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
       <button aria-label="Select AI as answer" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-red-400 flex items-center justify-center text-lg" id="btn-ai" type="button">
-       <i aria-hidden="true" class="fas fa-robot mr-3 text-2xl">
-       </i>
-       AI
+        <i aria-hidden="true" class="fas fa-robot mr-3 text-2xl"></i>
+        AI
       </button>
       <button aria-label="Select Human as answer" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-green-400 flex items-center justify-center text-lg" id="btn-human" type="button">
-       <i aria-hidden="true" class="fas fa-user mr-3 text-2xl">
-       </i>
-       Human
+        <i aria-hidden="true" class="fas fa-user mr-3 text-2xl"></i>
+        Human
       </button>
-     </div>
+      </div>
     </div>
     <div class="flex justify-between mt-6">
-     <button aria-label="Previous question" class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled="" id="prev-btn" type="button">
-      <i aria-hidden="true" class="fas fa-arrow-left mr-2">
-      </i>
+      <button aria-label="Previous question" class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled="" id="prev-btn" type="button">
+      <i aria-hidden="true" class="fas fa-arrow-left mr-2"></i>
       Previous
-     </button>
-     <button aria-label="Quit game" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-400" id="quit-btn" type="button">
-      <i aria-hidden="true" class="fas fa-sign-out-alt mr-2">
-      </i>
+      </button>
+      <button aria-label="Quit game" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-400" id="quit-btn" type="button">
+      <i aria-hidden="true" class="fas fa-sign-out-alt mr-2"></i>
       Quit
-     </button>
-     <button aria-label="Next question" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-400" id="next-btn" type="button">
+      </button>
+      <button aria-label="Next question" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-400" id="next-btn" type="button">
       Next
-      <i aria-hidden="true" class="fas fa-arrow-right ml-2">
-      </i>
-     </button>
+      <i aria-hidden="true" class="fas fa-arrow-right ml-2"></i>
+      </button>
     </div>
     <div aria-atomic="true" aria-live="polite" class="hidden flex-col items-center space-y-5 text-center" id="feedback-container" role="region">
-     <p class="text-xl font-semibold text-gray-900" id="feedback-text">
-     </p>
-     <button aria-label="Continue to next question or results" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-400" id="feedback-next-btn" type="button">
+      <p class="text-xl font-semibold" id="feedback-text"></p>
+      <button aria-label="Continue to next question or results" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-400" id="feedback-next-btn" type="button">
       Continue
-     </button>
+      </button>
     </div>
    </section>
    <section aria-atomic="true" aria-live="polite" class="hidden flex flex-col items-center space-y-8 text-center mt-12 px-4" id="result-container" role="region">
-    <h2 class="text-6xl font-extrabold gradient-text select-none tracking-tight">
-     Challenge Complete!
+    <h2 class="text-6xl font-extrabold gradient-text select-none tracking-tight" style="">
+      Challenge Complete!
     </h2>
-    <p class="text-2xl max-w-3xl leading-relaxed" id="final-message">
-     <span class="sparkle">
-      Congratulations!
-     </span>
-     Your insight is remarkable. Keep exploring, innovating, and leading with confidence.
+    <p class="text-2xl max-w-3xl leading-relaxed" id="final-message" style="">
+      <span class="sparkle">Congratulations!</span> Your insight is remarkable. Keep exploring, innovating, and leading with confidence.
     </p>
     <div class="flex flex-col sm:flex-row gap-6 mt-6 w-full max-w-md justify-center">
-     <button aria-label="Play again" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="restart-btn" type="button">
+      <button aria-label="Play again" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="restart-btn" type="button">
       Play Again
-     </button>
-     <button aria-label="End challenge" class="flex-1 bg-gray-700 hover:bg-gray-800 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-600" id="end-btn" type="button">
+      </button>
+      <button aria-label="End challenge" class="flex-1 bg-gray-700 hover:bg-gray-800 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-600" id="end-btn" type="button">
       End Challenge
-     </button>
+      </button>
     </div>
    </section>
    <section aria-atomic="true" aria-live="polite" class="hidden flex flex-col items-center space-y-8 text-center mt-12 px-6 max-w-3xl" id="end-container" role="region">
     <h2 class="text-4xl font-extrabold text-indigo-700">
-     You've Reached the Finish Line!
+      You've Reached the Finish Line!
     </h2>
-    <img alt="Illustration of a person joyfully celebrating success with confetti and a shining trophy, symbolizing achievement and accomplishment" class="rounded-3xl shadow-lg w-full max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/739db3a0-3115-44d6-a324-0dd03e7ed4f9.jpg" width="600"/>
-    <p class="text-lg text-gray-700">
-     Congratulations on completing the AI or Human content challenge! Your curiosity and insight have brought you to the forefront of understanding the fascinating blend of human creativity and artificial intelligence.
+    <img alt="Illustration of a person joyfully celebrating success with confetti and a shining trophy, symbolizing achievement and accomplishment" class="rounded-3xl shadow-lg w-full max-w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/7d16fda6-889a-426c-b53f-2d794990691c.jpg" width="600"/>
+    <p class="text-lg">
+      Congratulations on completing the AI or Human content challenge! Your curiosity and insight have brought you to the forefront of understanding the fascinating blend of human creativity and artificial intelligence.
     </p>
     <div class="flex flex-col sm:flex-row gap-6 justify-center mt-6 w-full max-w-md">
-     <button aria-label="Play again from end page" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="end-restart-btn" type="button">
+      <button aria-label="Play again from end page" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="end-restart-btn" type="button">
       Play Again
-     </button>
-     <button aria-label="Return to home page" class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-500" id="end-home-btn" type="button">
+      </button>
+      <button aria-label="Return to home page" class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-500" id="end-home-btn" type="button">
       Return to Home
-     </button>
+      </button>
     </div>
    </section>
   </main>
   <script>
-   const questions = [
+    const questions = [
       {
         question: "AI or Human?",
         contentType: "text",
@@ -331,16 +361,6 @@ Dreams unfold in this quiet place.`,
 
     function clearContentBox() {
       contentBoxEl.innerHTML = "";
-      const existingReadBtn = document.getElementById("read-btn");
-      if (existingReadBtn) {
-        existingReadBtn.remove();
-      }
-    }
-
-    function speakText(text) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      window.speechSynthesis.speak(utterance);
     }
 
     function loadQuestion() {
@@ -354,16 +374,8 @@ Dreams unfold in this quiet place.`,
         const p = document.createElement("p");
         p.textContent = current.content;
         p.className =
-          "whitespace-pre-wrap text-gray-800 text-base md:text-lg max-w-3xl";
+          "whitespace-pre-wrap text-base md:text-lg"; /* Removed text-gray-800 here */
         contentBoxEl.appendChild(p);
-
-        const newReadBtn = document.createElement("button");
-        newReadBtn.id = "read-btn";
-        newReadBtn.className =
-          "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow mt-4";
-        newReadBtn.innerText = "🔊 Read Aloud";
-        newReadBtn.addEventListener("click", () => speakText(current.content));
-        contentBoxEl.appendChild(newReadBtn);
       } else if (current.contentType === "image") {
         const img = document.createElement("img");
         img.src = current.content.src;
@@ -395,8 +407,6 @@ Dreams unfold in this quiet place.`,
     }
 
     function handleAnswer(selected) {
-      window.speechSynthesis.cancel();
-
       btnAI.disabled = true;
       btnHuman.disabled = true;
       btnAI.classList.add("opacity-50", "cursor-not-allowed");
@@ -406,9 +416,9 @@ Dreams unfold in this quiet place.`,
       const correct = current.answer;
 
       if (selected === correct) {
-        feedbackText.innerHTML = `<i class="fas fa-check-circle text-green-500 mr-2"></i>Correct! This content was created by <span class="font-semibold">${correct.toUpperCase()}</span>.`;
+        feedbackText.innerHTML = `<i class="fas fa-check-circle text-green-400 mr-2"></i>Correct! This content was created by <span class="font-semibold">${correct.toUpperCase()}</span>.`; /* Adjusted green shade */
       } else {
-        feedbackText.innerHTML = `<i class="fas fa-times-circle text-red-500 mr-2"></i>Wrong! This content was created by <span class="font-semibold">${correct.toUpperCase()}</span>.`;
+        feedbackText.innerHTML = `<i class="fas fa-times-circle text-red-400 mr-2"></i>Wrong! This content was created by <span class="font-semibold">${correct.toUpperCase()}</span>.`; /* Adjusted red shade */
       }
 
       feedbackContainer.classList.remove("hidden");
@@ -419,7 +429,6 @@ Dreams unfold in this quiet place.`,
     btnHuman.addEventListener("click", () => handleAnswer("human"));
 
     nextBtn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
       if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
         loadQuestion();
@@ -428,7 +437,6 @@ Dreams unfold in this quiet place.`,
     });
 
     prevBtn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
       if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
         loadQuestion();
@@ -437,7 +445,6 @@ Dreams unfold in this quiet place.`,
     });
 
     quitBtn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
       frontPage.classList.add("hidden");
       gameSection.classList.add("hidden");
       resultContainer.classList.add("hidden");
@@ -456,7 +463,6 @@ Dreams unfold in this quiet place.`,
     });
 
     feedbackNextBtn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
       if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
         loadQuestion();
@@ -468,7 +474,6 @@ Dreams unfold in this quiet place.`,
     });
 
     restartBtn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
       currentQuestionIndex = 0;
       resultContainer.classList.add("hidden");
       frontPage.classList.add("hidden");
@@ -481,7 +486,6 @@ Dreams unfold in this quiet place.`,
     });
 
     startBtn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
       frontPage.classList.add("hidden");
       gameSection.classList.remove("hidden");
       resultContainer.classList.add("hidden");
@@ -494,7 +498,6 @@ Dreams unfold in this quiet place.`,
     });
 
     endBtn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
       resultContainer.classList.add("hidden");
       endContainer.classList.remove("hidden");
       frontPage.classList.add("hidden");
@@ -505,7 +508,6 @@ Dreams unfold in this quiet place.`,
     });
 
     endRestartBtn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
       endContainer.classList.add("hidden");
       currentQuestionIndex = 0;
       frontPage.classList.add("hidden");
@@ -518,7 +520,6 @@ Dreams unfold in this quiet place.`,
     });
 
     endHomeBtn.addEventListener("click", () => {
-      window.speechSynthesis.cancel();
       endContainer.classList.add("hidden");
       frontPage.classList.remove("hidden");
       gameSection.classList.add("hidden");
@@ -530,13 +531,12 @@ Dreams unfold in this quiet place.`,
     });
 
     function showResult() {
-      window.speechSynthesis.cancel();
       questionContainer.classList.add("hidden");
       feedbackContainer.classList.add("hidden");
       resultContainer.classList.remove("hidden");
       endContainer.classList.add("hidden");
 
-      finalMessageEl.textContent = "Congratulations! Your insight is remarkable. Keep exploring AI.";
+      finalMessageEl.textContent = "Congratulations! Your insight is remarkable. Keep exploring AI";
     }
 
     frontPage.classList.remove("hidden");
