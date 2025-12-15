@@ -7,19 +7,15 @@
   </title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Orbitron:wght">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght">
   <style>
     body {
       font-family: "Inter", sans-serif;
-      /* --- MODIFIED BACKGROUND STYLE START --- */
-      /* Use a smooth gradient from deep blue/indigo (top-left) to vibrant magenta/pink (bottom-right) */
+      /* Full page background: Deep Purple/Blue to Magenta/Pink */
       background: linear-gradient(135deg, #4A00B8 0%, #E83E8C 100%);
-      background-attachment: fixed; /* Ensures the gradient covers the full viewport even with scrolling */
-      /* --- MODIFIED BACKGROUND STYLE END --- */
+      background-attachment: fixed;
       min-height: 100vh;
     }
-
-    /* Keep the rest of the styles (video, img, .main-gradient-text, @keyframes, .glow, .sparkle, main, etc.) the same */
 
     video {
       max-width: 100%;
@@ -100,62 +96,84 @@
       0%, 100% { opacity: 0.9; transform: scale(1) rotate(0deg); }
       50% { opacity: 0; transform: scale(0.5) rotate(45deg); }
     }
-    /* Styles for the main content area */
+
+    /* Styles for the main content area - Subtle and Dark */
     main {
-        background: rgba(17, 24, 39, 0.8); /* Darker, semi-transparent background */
-        backdrop-filter: blur(5px); /* Optional: Adds a subtle blur effect */
-        border: 1px solid rgba(0, 255, 255, 0.3); /* Electric blue border */
-        color: #E5E7EB; /* Light grey text for contrast */
+        background: rgba(17, 24, 39, 0.95); /* Nearly opaque dark background */
+        backdrop-filter: blur(5px);
+        /* Subtle gradient border effect */
+        border: 1px solid transparent; 
+        border-image: linear-gradient(45deg, #a855f7, #ec4899) 1;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 15px rgba(168, 85, 247, 0.3); /* Subtle purple outer glow */
+        color: #E5E7EB;
     }
-    /* Adjust text colors within main to be visible on dark background */
-    main h1, main h2, main p, main span {
-        color: inherit; /* Inherit color from main */
-    }
-    /* Specific adjustments for elements within #front-page and #game */
-    #front-page p {
-        color: #D1D5DB; /* Lighter grey for better readability */
-    }
+    
     #question-text {
-        color: #E5E7EB; /* Light grey for question text */
+        color: #E5E7EB;
     }
+    
+    /* Themed Question Content Box - Subtle Blur Effect */
     #content-box {
-        background: rgba(31, 41, 55, 0.9); /* Darker background for content box */
-        border-color: rgba(0, 255, 255, 0.2); /* Subtle electric blue border */
-        color: #E5E7EB; /* Light grey text */
+        background-color: rgba(31, 41, 55, 0.7); /* Darker, transparent base */
+        /* Subtle glow and soft, themed border */
+        border: 1px solid rgba(168, 85, 247, 0.3); 
+        box-shadow: 0 0 10px rgba(236, 72, 153, 0.2); 
+        color: #E5E7EB;
+        transition: all 0.3s ease-in-out;
     }
+    #content-box:hover {
+         box-shadow: 0 0 15px rgba(168, 85, 247, 0.5), 0 0 25px rgba(236, 72, 153, 0.3); /* Enhanced hover glow */
+    }
+    
     #content-box p {
-        color: #E5E7EB; /* Ensure text in content box is light */
+        color: #D1D5DB;
     }
-    #feedback-text {
-        color: #E5E7EB; /* Light grey for feedback text */
+    
+    /* Custom Gradient Button Class - Kept vibrant for CTA */
+    .theme-button-gradient {
+        background: linear-gradient(90deg, #6366f1, #ec4899); /* Indigo to Pink */
+        border: none;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.5);
     }
+
+    .theme-button-gradient:hover {
+        background: linear-gradient(90deg, #ec4899, #6366f1);
+        box-shadow: 0 8px 25px rgba(236, 72, 153, 0.7);
+    }
+
+    /* Result Container Theming */
     #result-container {
-        background: rgba(17, 24, 39, 0.9); /* Darker background for result container */
-        box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2); /* Electric blue shadow */
-        border: 1px solid rgba(0, 255, 255, 0.3); /* Electric blue border */
-        color: #E5E7EB; /* Light grey text */
+        background: rgba(17, 24, 39, 0.95);
+        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4); 
+        border: 1px solid rgba(168, 85, 247, 0.3);
+        color: #E5E7EB;
     }
-    #result-container button {
-        box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3); /* Electric blue shadow for buttons */
-    }
-    #result-container button:hover {
-        box-shadow: 0 12px 30px rgba(0, 255, 255, 0.6); /* Enhanced hover shadow */
-    }
-    #final-message {
-        color: #E5E7EB; /* Light grey for final message */
-    }
+    
+    /* End Container Theming */
     #end-container {
-        background: rgba(17, 24, 39, 0.9); /* Darker background for end container */
-        box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2); /* Electric blue shadow */
-        border: 1px solid rgba(0, 255, 255, 0.3); /* Electric blue border */
-        color: #E5E7EB; /* Light grey text */
+        background: rgba(17, 24, 39, 0.95);
+        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+        border: 1px solid rgba(168, 85, 247, 0.3);
+        color: #E5E7EB;
     }
     #end-container h2 {
-        color: #00AACC; /* Electric blue for end container title */
+        /* Apply the full gradient text for maximum impact */
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(90deg, #ec4899, #a855f7); 
+        filter: drop-shadow(0 0 5px #a855f7);
     }
     #end-container p {
-        color: #D1D5DB; /* Lighter grey for end container text */
+        color: #D1D5DB;
     }
+    
+    /* Minor utility style to fix border-image issue with Tailwind border class */
+    .border {
+        border-width: 0; /* Remove default Tailwind border from content box */
+    }
+
   </style>
  </head>
  <body class="flex flex-col items-center justify-center p-4 min-h-screen">
@@ -173,7 +191,7 @@
       Challenge your insight. Distinguish the subtle line where human creativity
       meets artificial intelligence. Are you ready to see beyond the obvious?
     </p>
-    <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="start-btn" type="button">
+    <button class="theme-button-gradient text-white font-bold py-4 px-12 rounded-xl transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="start-btn" type="button">
       Start Game
     </button>
    </section>
@@ -218,14 +236,14 @@
     </div>
    </section>
    <section aria-atomic="true" aria-live="polite" class="hidden flex flex-col items-center space-y-8 text-center mt-12 px-4" id="result-container" role="region">
-    <h2 class="text-6xl font-extrabold gradient-text select-none tracking-tight" style="">
+    <h2 class="text-6xl font-extrabold main-gradient-text glow select-none tracking-tight">
       Challenge Complete!
     </h2>
     <p class="text-2xl max-w-3xl leading-relaxed" id="final-message" style="">
       <span class="sparkle">Congratulations!</span> Your insight is remarkable. Keep exploring, innovating, and leading with confidence.
     </p>
     <div class="flex flex-col sm:flex-row gap-6 mt-6 w-full max-w-md justify-center">
-      <button aria-label="Play again" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="restart-btn" type="button">
+      <button aria-label="Play again" class="flex-1 theme-button-gradient text-white font-bold py-4 px-12 rounded-xl transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="restart-btn" type="button">
       Play Again
       </button>
       <button aria-label="End challenge" class="flex-1 bg-gray-700 hover:bg-gray-800 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-600" id="end-btn" type="button">
@@ -234,7 +252,7 @@
     </div>
    </section>
    <section aria-atomic="true" aria-live="polite" class="hidden flex flex-col items-center space-y-8 text-center mt-12 px-6 max-w-3xl" id="end-container" role="region">
-    <h2 class="text-4xl font-extrabold text-indigo-700">
+    <h2 class="text-4xl font-extrabold">
       You've Reached the Finish Line!
     </h2>
     <img alt="Illustration of a person joyfully celebrating success with confetti and a shining trophy, symbolizing achievement and accomplishment" class="rounded-3xl shadow-lg w-full max-w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/7d16fda6-889a-426c-b53f-2d794990691c.jpg" width="600"/>
@@ -242,7 +260,7 @@
       Congratulations on completing the AI or Human content challenge! Your curiosity and insight have brought you to the forefront of understanding the fascinating blend of human creativity and artificial intelligence.
     </p>
     <div class="flex flex-col sm:flex-row gap-6 justify-center mt-6 w-full max-w-md">
-      <button aria-label="Play again from end page" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="end-restart-btn" type="button">
+      <button aria-label="Play again from end page" class="flex-1 theme-button-gradient text-white font-bold py-4 px-8 rounded-xl transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="end-restart-btn" type="button">
       Play Again
       </button>
       <button aria-label="Return to home page" class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-500" id="end-home-btn" type="button">
