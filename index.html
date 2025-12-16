@@ -3,74 +3,63 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>TCS LTC IP&I and CR Away day 2025</title>
+  <title>GEN WARS: AI vs Human</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
   <style>
+    /* ---------------------------------------------------------------------- */
+    /* 1. GLOBAL STYLES & BACKGROUND (Purple/Blue Gradient for high-end look) */
+    /* ---------------------------------------------------------------------- */
     body {
       font-family: "Inter", sans-serif;
-      background: linear-gradient(135deg, #C084FC 0%, #7C3AED 50%, #4C1D95 100%);
+      /* Using a vibrant gradient that mimics the uploaded images (purple/blue) */
+      background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #A855F7 100%);
       background-attachment: fixed;
       min-height: 100vh;
+      color: #E5E7EB; /* Light grey text for readability */
+      display: flex; /* For centering the main container */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
     }
 
-    video {
-      max-width: 100%;
-      border-radius: 0.375rem;
-      box-shadow: 0 4px 15px rgb(0 0 0 / 0.25);
+    /* ---------------------------------------------------------------------- */
+    /* 2. TYPOGRAPHY & TEXT EFFECTS */
+    /* ---------------------------------------------------------------------- */
+    .main-title-text {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        /* Subtle glow effect for titles */
+        text-shadow: 0 0 10px rgba(167, 139, 250, 0.6), 0 0 20px rgba(124, 58, 237, 0.4);
     }
-    img {
-      border-radius: 0.375rem;
-      box-shadow: 0 4px 15px rgb(0 0 0 / 0.25);
-      object-fit: cover;
+    
+    .subtitle-text {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        color: #A78BFA; /* Light purple accent */
     }
-    .main-gradient-text {
-      background: linear-gradient(90deg, #a855f7, #ec4899);
-      background-size: 200% 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientAnimation 3s ease infinite;
-      text-shadow: none;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: -0.02em;
-    }
+
     .black-grey-gradient-text {
+      /* Gradient for secondary titles */
       background: linear-gradient(90deg, #FFFFFF, #E0E0E0);
-      background-size: 200% 200%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: gradientAnimation 3s ease infinite;
       text-shadow: none;
-      font-family: 'Orbitron', sans-serif;
-      letter-spacing: 0.05em;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
     }
-    @keyframes gradientAnimation {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-    .glow {
-      text-shadow:
-        0 0 8px #a855f7,
-        0 0 15px #ec4899,
-        0 0 25px #a855f7,
-        0 0 40px #ec4899,
-        0 0 60px #a855f7;
-    }
+
+    /* Sparkle for Congratulations */
     .sparkle {
       position: relative;
       display: inline-block;
-      color: #C084FC;
+      color: #FBBF24; /* Gold/Yellow for sparkle */
       font-weight: 700;
       font-size: 1.4em;
-      filter: drop-shadow(0 0 6px #C084FC);
+      filter: drop-shadow(0 0 8px #FBBF24);
     }
     .sparkle::before, .sparkle::after {
       content: "✨";
@@ -78,7 +67,7 @@
       font-size: 1.8rem;
       animation: sparkleAnim 2.5s infinite ease-in-out;
       opacity: 0.9;
-      filter: drop-shadow(0 0 6px #C084FC);
+      filter: drop-shadow(0 0 8px #FBBF24);
     }
     .sparkle::before {
       top: -1.6rem;
@@ -92,218 +81,244 @@
     }
     @keyframes sparkleAnim {
       0%, 100% { opacity: 0.9; transform: scale(1) rotate(0deg); }
-      50% { opacity: 0; transform: scale(0.5) rotate(45deg); }
+      50% { opacity: 0.2; transform: scale(0.6) rotate(30deg); }
     }
-    
+
+
+    /* ---------------------------------------------------------------------- */
+    /* 3. CONTAINERS & BOXES (Glassmorphism/Futuristic look) */
+    /* ---------------------------------------------------------------------- */
     main {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(20px);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        color: #FFFFFF;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    }
-    
-    main h1, main h2, main p, main span {
-        color: inherit;
-    }
-    
-    #front-page p {
-        color: #FFFFFF;
-    }
-    
-    #question-text {
-        color: #FFFFFF;
-        text-shadow: 0 2px 10px rgba(192, 132, 252, 0.5);
-        font-family: 'Orbitron', sans-serif;
+        /* Main Glassmorphism Effect for a classy, high-end look */
+        background: rgba(255, 255, 255, 0.08); 
+        backdrop-filter: blur(30px); 
+        -webkit-backdrop-filter: blur(30px);
+        border: 2px solid rgba(255, 255, 255, 0.2); 
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(124, 58, 237, 0.5); 
     }
     
     #question-container {
-        background: linear-gradient(135deg, rgba(192, 132, 252, 0.3) 0%, rgba(124, 58, 237, 0.3) 100%);
-        backdrop-filter: blur(10px);
-        position: relative;
-        z-index: 1;
-        padding: 2.5rem; 
-        border-radius: 1rem;
-        border: 2px solid rgba(255, 255, 255, 0.4);
-        box-shadow: 0 8px 32px rgba(124, 58, 237, 0.4);
-        overflow: hidden;
+        /* Inner container for the question area */
+        background: rgba(0, 0, 0, 0.3); 
+        border: 1px solid rgba(167, 139, 250, 0.4); 
+        box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);
     }
     
-    #question-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(76, 29, 149, 0.2);
-        border-radius: 1rem;
-        z-index: -1;
-    }
-    
-    #question-container p, #question-container span, #question-container h2 {
-        color: #FFFFFF;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    }
-
     #content-box {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        border-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
-        color: #FFFFFF;
+        /* Content display area */
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
     }
-    #content-box p {
-        color: #FFFFFF;
+    
+    #result-container, #end-container {
+        /* Result/End screens inherit the main aesthetic */
+        background: rgba(255, 255, 255, 0.08); 
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(124, 58, 237, 0.5);
     }
 
+    /* ---------------------------------------------------------------------- */
+    /* 4. MEDIA ELEMENTS (Images/Video/Audio) - Proper Placement */
+    /* ---------------------------------------------------------------------- */
+    video, img, audio {
+      max-width: 100%;
+      border-radius: 1rem; 
+      box-shadow: 0 4px 20px rgb(0 0 0 / 0.4), 0 0 15px rgba(255, 255, 255, 0.2); 
+      object-fit: contain; 
+      max-height: 450px; 
+    }
+    
+    audio {
+        width: 100%;
+        max-width: 400px; 
+        background-color: rgba(255, 255, 255, 0.15); 
+        filter: drop-shadow(0 0 5px #A78BFA); 
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 5. BUTTON STYLES (Glow and Depth) */
+    /* ---------------------------------------------------------------------- */
+    button {
+        transition: all 0.25s ease-in-out;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* Primary Action Buttons (Start/Restart/Continue) */
+    .action-btn {
+        background: linear-gradient(90deg, #6366F1, #9333EA); 
+        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+        color: white;
+    }
+    .action-btn:hover {
+        background: linear-gradient(90deg, #4F46E5, #7C3AED);
+        box-shadow: 0 8px 30px rgba(124, 58, 237, 0.8);
+        transform: translateY(-2px);
+    }
+
+    /* AI/Human Choice Buttons (Distinctive colors) */
     #btn-ai {
+        background-color: #EF4444; /* Red for AI */
         box-shadow: 0 4px 15px rgba(239, 68, 68, 0.5);
     }
     #btn-ai:hover {
-        box-shadow: 0 4px 20px rgba(239, 68, 68, 0.7);
+        background-color: #DC2626;
+        box-shadow: 0 6px 20px rgba(239, 68, 68, 0.7);
+        transform: scale(1.02);
     }
     
     #btn-human {
-        box-shadow: 0 4px 15px rgba(34, 197, 94, 0.5);
+        background-color: #10B981; /* Emerald Green for Human */
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5);
     }
     #btn-human:hover {
-        box-shadow: 0 4px 20px rgba(34, 197, 94, 0.7);
+        background-color: #059669;
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.7);
+        transform: scale(1.02);
     }
-
+    
+    /* Navigation Buttons (Prev/Next/Quit) */
+    .nav-btn {
+        background-color: rgba(255, 255, 255, 0.15); 
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #E5E7EB;
+        font-weight: 500;
+    }
+    .nav-btn:hover:not(:disabled) {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    .nav-btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+    
+    /* Quit Button - Accent Yellow */
+    #quit-btn {
+        background-color: #FBBF24;
+        color: #1F2937;
+        box-shadow: 0 4px 15px rgba(251, 191, 36, 0.5);
+    }
+    #quit-btn:hover {
+        background-color: #F59E0B;
+        box-shadow: 0 6px 20px rgba(251, 191, 36, 0.7);
+    }
+    
+    /* Feedback Text */
     #feedback-text {
-        color: #FFFFFF;
-    }
-    
-    #game button:not(#btn-ai):not(#btn-human) {
-        box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
-    }
-    #game button:not(#btn-ai):not(#btn-human):hover {
-        box-shadow: 0 6px 15px rgba(124, 58, 237, 0.5);
-    }
-    
-    #result-container {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(20px);
-        box-shadow: 0 8px 32px rgba(124, 58, 237, 0.4);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        color: #FFFFFF;
-    }
-    #result-container button {
-        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
-    }
-    #result-container button:hover {
-        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.6);
-    }
-    #final-message {
-        color: #FFFFFF;
-    }
-    #end-container {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(20px);
-        box-shadow: 0 8px 32px rgba(124, 58, 237, 0.4);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        color: #FFFFFF;
-    }
-    #end-container h2 {
-        color: #C084FC;
-        text-shadow: 0 2px 10px rgba(192, 132, 252, 0.6);
-    }
-    #end-container p {
-        color: #FFFFFF;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
   </style>
 </head>
 <body class="flex flex-col items-center justify-center p-4 min-h-screen">
   <main class="w-full max-w-4xl rounded-3xl shadow-2xl p-8 md:p-12 mt-12 mb-12 flex flex-col items-center">
-    <section class="flex flex-col items-center space-y-8 w-full" id="front-page">
-      <h1 class="text-3xl font-extrabold text-center text-white tracking-wide select-none">
-        TCS LTC IP&I and CR Away day 2025
-        <br/>
-        <span class="text-3xl font-semibold black-grey-gradient-text">
-          AI vs Human?
-        </span>
-      </h1>
+    
+    <section class="flex flex-col items-center space-y-10 w-full" id="front-page">
+      <div class="flex flex-col items-center text-center">
+          <h1 class="text-5xl md:text-7xl main-title-text tracking-tight select-none">
+            GEN WARS
+          </h1>
+          <p class="text-xl md:text-3xl subtitle-text mt-2 block">
+            The Creativity Challenge
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold black-grey-gradient-text mt-4">
+            AI vs Human?
+          </h2>
+      </div>
+      
       <img alt="High quality image showing a split screen with human creativity on one side featuring a person writing and painting, and AI creativity on the other side with digital neural network and code symbols" class="rounded-3xl shadow-lg max-w-full" height="200" src="https://motionarray.imgix.net/motion-array-2056463-kg8z0CL8Ch-high_0006.jpg?w=660&q=60&fit=max&auto=format" width="400"/>
-      <p class="text-center text-lg max-w-3xl">
-        Challenge your insight. Distinguish the subtle line where human creativity meets artificial intelligence. Are you ready to see beyond the obvious?
+      <p class="text-center text-lg md:text-xl max-w-3xl font-medium leading-relaxed text-gray-200">
+        Challenge your insight. Distinguish the subtle line where human creativity meets artificial intelligence in this epic 10-question challenge.
       </p>
-      <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="start-btn" type="button">
-        Start Game
+      <button class="action-btn font-bold py-4 px-12 rounded-xl shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-purple-400 transform hover:scale-105" id="start-btn" type="button">
+        <i aria-hidden="true" class="fas fa-rocket mr-3"></i>
+        Initiate Challenge
       </button>
     </section>
     
     <section class="hidden w-full space-y-10" id="game">
-      <div class="space-y-8 p-6" id="question-container">
-        <p class="text-xl md:text-2xl font-semibold leading-relaxed text-center" id="question-text">
+      <div class="space-y-8 p-6 md:p-8 rounded-2xl" id="question-container">
+        <p class="text-xl md:text-3xl font-semibold leading-relaxed text-center subtitle-text" id="question-text">
           Loading question...
         </p>
-        <div class="border rounded-xl p-6 text-base md:text-lg min-h-[180px] flex flex-col items-center justify-center space-y-6" id="content-box">
+        
+        <div class="border rounded-xl p-4 md:p-6 text-base md:text-lg min-h-[180px] flex flex-col items-center justify-center space-y-6" id="content-box">
           Loading content...
         </div>
+        
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <button aria-label="Select AI as answer" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-red-400 flex items-center justify-center text-lg" id="btn-ai" type="button">
+          <button aria-label="Select AI as answer" class="flex-1 text-white font-bold py-4 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-red-400 flex items-center justify-center text-xl" id="btn-ai" type="button">
             <i aria-hidden="true" class="fas fa-robot mr-3 text-2xl"></i>
-            AI
+            AI Creation
           </button>
-          <button aria-label="Select Human as answer" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-green-400 flex items-center justify-center text-lg" id="btn-human" type="button">
-            <i aria-hidden="true" class="fas fa-user mr-3 text-2xl"></i>
-            Human
+          <button aria-label="Select Human as answer" class="flex-1 text-white font-bold py-4 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-green-400 flex items-center justify-center text-xl" id="btn-human" type="button">
+            <i aria-hidden="true" class="fas fa-user-edit mr-3 text-2xl"></i>
+            Human Touch
           </button>
         </div>
       </div>
-      <div class="flex justify-between mt-6">
-        <button aria-label="Previous question" class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled id="prev-btn" type="button">
-          <i aria-hidden="true" class="fas fa-arrow-left mr-2"></i>
-          Previous
+      
+      <div class="flex justify-between mt-6 w-full">
+        <button aria-label="Previous question" class="nav-btn py-3 px-6 rounded-xl transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-300" disabled id="prev-btn" type="button">
+          <i aria-hidden="true" class="fas fa-arrow-left"></i>
+          <span class="hidden sm:inline ml-2">Previous</span>
         </button>
-        <button aria-label="Quit game" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-400" id="quit-btn" type="button">
+        <button aria-label="Quit game" class="nav-btn py-3 px-6 rounded-xl transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-400" id="quit-btn" type="button">
           <i aria-hidden="true" class="fas fa-sign-out-alt mr-2"></i>
-          Quit
+          Quit Game
         </button>
-        <button aria-label="Next question" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-400" id="next-btn" type="button">
-          Next
-          <i aria-hidden="true" class="fas fa-arrow-right ml-2"></i>
+        <button aria-label="Next question" class="nav-btn py-3 px-6 rounded-xl transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-400" id="next-btn" type="button">
+          <span class="hidden sm:inline mr-2">Next</span>
+          <i aria-hidden="true" class="fas fa-arrow-right"></i>
         </button>
       </div>
-      <div aria-atomic="true" aria-live="polite" class="hidden flex-col items-center space-y-5 text-center" id="feedback-container" role="region">
-        <p class="text-xl font-semibold" id="feedback-text"></p>
-        <button aria-label="Continue to next question or results" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-400" id="feedback-next-btn" type="button">
+      
+      <div aria-atomic="true" aria-live="polite" class="hidden flex-col items-center space-y-6 text-center pt-8 border-t border-gray-700" id="feedback-container" role="region">
+        <p class="text-xl md:text-2xl font-semibold text-white" id="feedback-text"></p>
+        <button aria-label="Continue to next question or results" class="action-btn font-bold py-3 px-10 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-400" id="feedback-next-btn" type="button">
+          <i aria-hidden="true" class="fas fa-chevron-right mr-2"></i>
           Continue
         </button>
       </div>
     </section>
     
-    <section aria-atomic="true" aria-live="polite" class="hidden flex flex-col items-center space-y-8 text-center mt-12 px-4" id="result-container" role="region">
-      <h2 class="text-6xl font-extrabold text-white select-none tracking-tight">
+    <section aria-atomic="true" aria-live="polite" class="hidden flex flex-col items-center space-y-8 text-center mt-12 px-4 p-8 rounded-3xl" id="result-container" role="region">
+      <h2 class="text-5xl md:text-6xl main-title-text select-none tracking-tight text-white">
         Challenge Complete!
       </h2>
-      <p class="text-2xl max-w-3xl leading-relaxed" id="final-message">
+      <p class="text-2xl max-w-3xl leading-relaxed text-gray-100" id="final-message">
         <span class="sparkle">Congratulations!</span> Your insight is remarkable. Keep exploring AI and innovating!
       </p>
       <div class="flex flex-col sm:flex-row gap-6 mt-6 w-full max-w-md justify-center">
-        <button aria-label="Play again" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="restart-btn" type="button">
-          Play Again
+        <button class="action-btn font-bold py-4 px-12 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-400 transform hover:scale-105" id="restart-btn" type="button">
+          <i aria-hidden="true" class="fas fa-redo-alt mr-2"></i>
+          Replay
         </button>
-        <button aria-label="End challenge" class="flex-1 bg-gray-700 hover:bg-gray-800 text-white font-bold py-4 px-12 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-600" id="end-btn" type="button">
-          End Challenge
+        <button class="nav-btn py-4 px-12 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-gray-600 transform hover:scale-105" id="end-btn" type="button">
+          <i aria-hidden="true" class="fas fa-door-open mr-2"></i>
+          Finish
         </button>
       </div>
     </section>
     
-    <section aria-atomic="true" aria-live="polite" class="hidden flex flex-col items-center space-y-8 text-center mt-12 px-6 max-w-3xl" id="end-container" role="region">
-      <h2 class="text-4xl font-extrabold">
-        You've Reached the Finish Line!
+    <section aria-atomic="true" aria-live="polite" class="hidden flex flex-col items-center space-y-8 text-center mt-12 px-6 p-8 rounded-3xl max-w-3xl" id="end-container" role="region">
+      <h2 class="text-4xl main-title-text">
+        Game Ended!
       </h2>
       <img alt="Illustration of a person joyfully celebrating success with confetti and a shining trophy" class="rounded-3xl shadow-lg w-full max-w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/7d16fda6-889a-426c-b53f-2d794990691c.jpg" width="600"/>
-      <p class="text-lg">
-        Congratulations on completing the AI or Human content challenge! Your curiosity and insight have brought you to the forefront of understanding the fascinating blend of human creativity and artificial intelligence.
+      <p class="text-lg text-gray-200">
+        You've concluded the AI or Human content challenge. Thank you for playing and engaging with the future of creativity!
       </p>
       <div class="flex flex-col sm:flex-row gap-6 justify-center mt-6 w-full max-w-md">
-        <button aria-label="Play again from end page" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-400" id="end-restart-btn" type="button">
+        <button class="action-btn font-bold py-4 px-8 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-400 transform hover:scale-105" id="end-restart-btn" type="button">
+          <i aria-hidden="true" class="fas fa-redo-alt mr-2"></i>
           Play Again
         </button>
-        <button aria-label="Return to home page" class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-500" id="end-home-btn" type="button">
+        <button class="nav-btn py-4 px-8 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-gray-500 transform hover:scale-105" id="end-home-btn" type="button">
+          <i aria-hidden="true" class="fas fa-home mr-2"></i>
           Return to Home
         </button>
       </div>
@@ -311,15 +326,10 @@
   </main>
   
   <script>
+    // Questions data including a dedicated 'audio' type
     const questions = [
       {
-        question: "AI or Human?",
-        contentType: "text",
-        content: `The sun dipped below the horizon, painting the sky with hues of orange and pink. A gentle breeze rustled the leaves, carrying the scent of blooming jasmine. It was a perfect evening to reflect on the day's adventures and dream about tomorrow's possibilities.`,
-        answer: "human",
-      },
-      {
-        question: "AI or Human?",
+        question: "Is this a photograph or an AI-generated image?",
         contentType: "image",
         content: {
           src: "https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2018/03/how-to-live-1.jpg?w=750",
@@ -328,7 +338,7 @@
         answer: "human",
       },
       {
-        question: "AI or Human?",
+        question: "Is this video footage captured by a camera or generated by an AI model?",
         contentType: "video",
         content: {
           src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
@@ -337,14 +347,14 @@
         answer: "human",
       },
       {
-        question: "AI or Human?",
+        question: "Was this short joke written by a person or created by a language model?",
         contentType: "text",
         content: `Joke 😅
 I tried to be more productive this year, so I made a to-do list. Now I just feel accomplished for having the list, which feels like cheating, but I'm choosing peace.`,
         answer: "ai",
       },
       {
-        question: "AI or Human?",
+        question: "Did an artist paint this, or was it created from a text prompt?",
         contentType: "image",
         content: {
           src: "./aiimage.jpeg",
@@ -353,7 +363,7 @@ I tried to be more productive this year, so I made a to-do list. Now I just feel
         answer: "ai",
       },
       {
-        question: "AI or Human?",
+        question: "Is this casual text conversation real or synthetically generated?",
         contentType: "text",
         content: `Casual conversation   
 Alex: hey, are you free for a quick call?
@@ -372,7 +382,7 @@ Alex: reasonable. sending the link.`,
         answer: "ai",
       },
       {
-        question: "AI or Human?",
+        question: "Is this a real oil painting, or an AI's interpretation?",
         contentType: "image",
         content: {
           src: "https://artstreet.in/cdn/shop/products/911udDTYPcL._SL1500_1500x1229.jpg?v=1587561973",
@@ -381,7 +391,17 @@ Alex: reasonable. sending the link.`,
         answer: "human",
       },
       {
-        question: "AI or Human?",
+        question: "Is this audio clip a human performance or an AI voice clone/synthesized track?",
+        contentType: "audio", 
+        content: {
+          src: "./aiaudio.mp3",
+          alt: "Short audio clip of AI-generated music or speech",
+        },
+        answer: "ai",
+      },
+      
+      {
+        question: "Was this short poem written by a human, or generated by an algorithm?",
         contentType: "text",
         content: `Whispers of the wind through trees so tall,
 A dance of shadows where the nightbirds call.
@@ -390,7 +410,7 @@ Dreams unfold in this quiet place.`,
         answer: "human",
       },
       {
-        question: "AI or Human?",
+        question: "Is this short animated clip a human-made animation or AI-video generation?",
         contentType: "video",
         content: {
           src: "./aivideo.mp4",
@@ -399,7 +419,7 @@ Dreams unfold in this quiet place.`,
         answer: "ai",
       },
       {
-        question: "AI or Human?",
+        question: "Is this diving photography authentic or an AI render?",
         contentType: "image",
         content: {
           src: "https://images.stockcake.com/public/a/4/b/a4be5c93-268e-426f-8245-1006e8bf42d2_large/diving-in-coral-stockcake.jpg",
@@ -439,37 +459,51 @@ Dreams unfold in this quiet place.`,
 
     function loadQuestion() {
       const current = questions[currentQuestionIndex];
-      questionTextEl.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}: ${current.question}`;
+      questionTextEl.textContent = `Q${currentQuestionIndex + 1} of ${questions.length}: ${current.question}`;
       clearContentBox();
+      
+      let contentEl;
 
+      // Logic for displaying different content types (Image, Video, Audio, Text)
       if (current.contentType === "text") {
-        const p = document.createElement("p");
-        p.textContent = current.content;
-        p.className = "whitespace-pre-wrap text-base md:text-lg";
-        contentBoxEl.appendChild(p);
+        contentEl = document.createElement("p");
+        contentEl.textContent = current.content;
+        contentEl.className = "whitespace-pre-wrap text-base md:text-lg text-center p-2 text-gray-100";
       } else if (current.contentType === "image") {
-        const img = document.createElement("img");
-        img.src = current.content.src;
-        img.alt = current.content.alt;
-        img.className = "rounded-xl shadow-lg max-w-full h-auto max-h-[400px]";
-        contentBoxEl.appendChild(img);
+        contentEl = document.createElement("img");
+        contentEl.src = current.content.src;
+        contentEl.alt = current.content.alt;
+        contentEl.className = "rounded-xl shadow-lg max-w-full h-auto max-h-[400px]";
       } else if (current.contentType === "video") {
-        const video = document.createElement("video");
-        video.src = current.content.src;
-        video.controls = true;
-        video.setAttribute("aria-label", current.content.alt);
-        video.className = "max-w-full rounded-xl shadow-lg";
-        video.setAttribute("playsinline", "");
-        video.setAttribute("preload", "metadata");
-        contentBoxEl.appendChild(video);
+        contentEl = document.createElement("video");
+        contentEl.src = current.content.src;
+        contentEl.controls = true;
+        contentEl.setAttribute("aria-label", current.content.alt);
+        contentEl.className = "max-w-full rounded-xl shadow-lg";
+        contentEl.setAttribute("playsinline", "");
+        contentEl.setAttribute("preload", "metadata");
+      } else if (current.contentType === "audio") { 
+        contentEl = document.createElement("audio");
+        contentEl.src = current.content.src;
+        contentEl.controls = true;
+        contentEl.setAttribute("aria-label", current.content.alt);
+        contentEl.className = "max-w-xs md:max-w-sm mx-auto"; 
+      }
+      
+      if (contentEl) {
+        contentBoxEl.appendChild(contentEl);
       }
 
       feedbackContainer.classList.add("hidden");
       questionContainer.classList.remove("hidden");
+      
+      // Reset button states
       btnAI.disabled = false;
       btnHuman.disabled = false;
-      btnAI.classList.remove("opacity-50", "cursor-not-allowed", "bg-red-400");
-      btnHuman.classList.remove("opacity-50", "cursor-not-allowed", "bg-green-400");
+      btnAI.classList.remove("opacity-50", "cursor-not-allowed");
+      btnHuman.classList.remove("opacity-50", "cursor-not-allowed");
+      
+      // Re-add choice button styling
       btnAI.classList.add("bg-red-600");
       btnHuman.classList.add("bg-green-600");
 
@@ -481,6 +515,7 @@ Dreams unfold in this quiet place.`,
       btnAI.disabled = true;
       btnHuman.disabled = true;
       
+      // Visually disable the unselected button
       if (selected === 'ai') {
         btnHuman.classList.add("opacity-50", "cursor-not-allowed");
       } else {
@@ -489,11 +524,14 @@ Dreams unfold in this quiet place.`,
 
       const current = questions[currentQuestionIndex];
       const correct = current.answer;
+      
+      const correctText = correct === 'ai' ? 'AI Creation' : 'Human Touch';
+      const selectedText = selected === 'ai' ? 'AI Creation' : 'Human Touch';
 
       if (selected === correct) {
-        feedbackText.innerHTML = `<i class="fas fa-check-circle text-green-400 mr-2"></i>Correct! This content was created by <span class="font-semibold">${correct.toUpperCase()}</span>.`;
+        feedbackText.innerHTML = `<i class="fas fa-check-circle text-green-400 mr-2"></i><span class="text-white">Correct!</span> You selected **${selectedText}**. It was indeed a **${correctText}**.`;
       } else {
-        feedbackText.innerHTML = `<i class="fas fa-times-circle text-red-400 mr-2"></i>Wrong! This content was created by <span class="font-semibold">${correct.toUpperCase()}</span>.`;
+        feedbackText.innerHTML = `<i class="fas fa-times-circle text-red-400 mr-2"></i><span class="text-white">Incorrect!</span> You selected **${selectedText}**. The correct source was the **${correctText}**.`;
       }
 
       feedbackContainer.classList.remove("hidden");
@@ -605,6 +643,7 @@ Dreams unfold in this quiet place.`,
       endContainer.classList.add("hidden");
     }
 
+    // Initial state setup
     frontPage.classList.remove("hidden");
     gameSection.classList.add("hidden");
     resultContainer.classList.add("hidden");
